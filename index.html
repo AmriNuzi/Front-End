@@ -272,76 +272,36 @@
     }).mount();
 
 
-//     document.addEventListener("DOMContentLoaded", function () {
-//   const testimonials = document.querySelectorAll(".testimonial-wrapper blockquote");
-//   const prevButton = document.getElementById("prev-button");
-//   const nextButton = document.getElementById("next-button");
-//   const pagination = document.getElementById("pagination");
-
-//   let currentIndex = 0; // Start with the first testimonial
-
-//   const updateTestimonial = () => {
-//     // Hide all testimonials
-//     testimonials.forEach((testimonial, index) => {
-//       testimonial.style.display = "none"; // Hide all blockquotes
-//     });
-
-//     // Show the current testimonial
-//     testimonials[currentIndex].style.display = "block";
-
-//     // Update pagination
-//     pagination.textContent = `${currentIndex + 1} / ${testimonials.length}`;
-//   };
-
-//   // Event listener for Next button
-//   nextButton.addEventListener("click", () => {
-//     currentIndex = (currentIndex + 1) % testimonials.length; // Move to the next, loop back to start
-//     updateTestimonial();
-//   });
-
-//   // Event listener for Prev button
-//   prevButton.addEventListener("click", () => {
-//     currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length; // Move to the previous, loop back to end
-//     updateTestimonial();
-//   });
-
-//   // Initialize the first testimonial
-//   updateTestimonial();
-// });
 document.addEventListener("DOMContentLoaded", function () {
   const testimonials = document.querySelectorAll(".testimonial-wrapper blockquote");
   const prevButton = document.getElementById("prev-button");
   const nextButton = document.getElementById("next-button");
   const pagination = document.getElementById("pagination");
 
-  let currentIndex = 0; // Start with the first testimonial
+  let currentIndex = 0; 
 
   const updateTestimonial = () => {
-    // Hide all testimonials
     testimonials.forEach((testimonial) => {
       testimonial.classList.remove("active");
     });
 
-    // Show the current testimonial
     testimonials[currentIndex].classList.add("active");
 
-    // Update pagination
     pagination.textContent = `${currentIndex + 1} / ${testimonials.length}`;
   };
 
-  // Event listener for Next button
   nextButton.addEventListener("click", () => {
-    currentIndex = (currentIndex + 1) % testimonials.length; // Move to the next, loop back to start
+    currentIndex = (currentIndex + 1) % testimonials.length; 
     updateTestimonial();
   });
 
-  // Event listener for Prev button
+
   prevButton.addEventListener("click", () => {
-    currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length; // Move to the previous, loop back to end
+    currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length; 
     updateTestimonial();
   });
 
-  // Initialize the first testimonial
+
   updateTestimonial();
 });
 
