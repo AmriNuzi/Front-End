@@ -307,9 +307,9 @@ footer p {
     color: #fff;
     text-align: center;
     padding: 20px;
-    background: rgba(0, 0, 0, 0.5); /* Optional: Add a semi-transparent background */
+    background: rgba(0, 0, 0, 0.5); 
     border-radius: 10px;
-    z-index: 1; /* Ensure the text overlay is above the image */
+    z-index: 1;
 }
 
 .text-overlay h2 {
@@ -338,11 +338,9 @@ footer p {
 }
 
 .submenu {
-    list-style: none;
-    /* position: absolute; */
+    list-style: none;    
     top: 100%;
     left: 0;
-    /* background: #f4f4f4; */
     padding: 10px 0;
     border: 1px solid #ddd;
     display: none;
@@ -365,7 +363,8 @@ footer p {
     color: #007BFF;
 }
 
-/* Show Submenu on Hover */
+
+
 .menu-item:hover > .submenu {
     /* display: block; */
 }
@@ -395,14 +394,6 @@ footer p {
 .glide__arrow:hover {
     background: #ffbc04;
 }
-
-/* .glide__slide img {
-    width: 100%;
-    height: 300px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  } */
-  
   .glide__arrows {
     display: flex;
     justify-content: flex-end;
@@ -424,6 +415,33 @@ footer p {
   }
 
 
+  /* Per Mobile (ekrane me te vogla se 768px) */
+  @media (max-width: 768px) {
+    .top-banner p{
+        width: 88%;
+    }
+    .glide__slide img {
+      width: 300px; 
+      height: 300px;
+      object-fit: cover; 
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      display: block;
+      margin: 0 auto; 
+    }
+  
+    .glide__arrows {
+      justify-content: center; 
+      margin-top: 10px;
+      gap: 10px;
+    }
+  
+    .glide__arrow {
+      padding: 8px 12px; 
+      font-size: 0.8rem;
+    }
+  }
+  
   .store-locator {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -480,22 +498,21 @@ footer p {
   .product-grid {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap; /* Ensures responsiveness */
-    gap: 20px; /* Adds spacing between items */
+    flex-wrap: wrap; 
+    gap: 20px; 
     padding: 0 10px;
   }
   
   .product {
-    flex: 1 1 calc(25% - 20px); /* Four items per row */
+    flex: 1 1 calc(25% - 20px);
     text-align: center;
-    max-width: 200px; /* Ensure images stay consistent */
-    margin: 0 auto; /* Center the items */
+    max-width: 200px; 
+    margin: 0 auto; 
   }
   
   .product img {
     width: 100%;
     height: 230px;
-    /* object-fit: contain; Keeps the aspect ratio */
     margin-bottom: 10px;
   }
   
@@ -507,16 +524,15 @@ footer p {
   }
   
 
-  /* Store Locator Section */
 .store-locator {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    grid-template-columns: 1fr 1fr; 
     gap: 20px;
     align-items: center;
-    background-color: #000; /* Black background for the left section */
+    background-color: #000;
     color: #fff;
     padding: 20px;
-    min-height: 400px; /* Ensure equal height for columns */
+    min-height: 400px; 
   }
   
   .locator-content {
@@ -524,41 +540,41 @@ footer p {
     flex-direction: column;
     justify-content: center;
     color: #fff;
-    max-width: 400px; /* Restrict text width */
+    max-width: 400px; 
   }
   
   .locator-content h2 {
-    font-size: 2rem; /* Adjust as per design */
+    font-size: 2rem; 
     font-weight: normal;
     margin: 0 0 10px;
   }
   
   .locator-content p {
-    font-size: 1.5rem; /* Slightly larger font size for emphasis */
-    line-height: 1.5; /* Increase line spacing for readability */
+    font-size: 1.5rem; 
+    line-height: 1.5; 
     margin: 0 0 20px;
   }
   
   .locator-content .search-store {
     padding: 10px 20px;
     font-size: 1rem;
-    background-color: transparent; /* Match design */
+    background-color: transparent;
     color: #fff;
-    border: 2px solid #fff; /* Visible border */
+    border: 2px solid #fff; 
     cursor: pointer;
     transition: background 0.3s ease, color 0.3s ease;
   }
   
   .locator-content .search-store:hover {
     background-color: #fff;
-    color: #000; /* Invert colors on hover */
+    color: #000;
   }
   
   
   .locator-map img {
-    width: 100%; /* Full width of the container */
+    width: 100%; 
     height: auto;
-    border-radius: 5px; /* Optional: rounded corners */
+    border-radius: 5px;
   }
   
 
@@ -582,12 +598,12 @@ footer p {
     position: relative;
     max-width: 900px;
     margin: 0 auto;
-    height: 200px; /* Fixed height to ensure consistent spacing */
-    overflow: hidden; /* Prevent extra blockquotes from showing */
+    height: 200px; 
+    overflow: hidden; 
   }
   
   .testimonial-wrapper blockquote {
-    display: none; /* Hide all testimonials by default */
+    display: none;
     font-size: 1.2rem;
     line-height: 1.6;
     color: #555;
@@ -601,7 +617,7 @@ footer p {
   }
   
   .testimonial-wrapper blockquote.active {
-    display: block; /* Show only the active testimonial */
+    display: block; 
   }
   
   .testimonial-wrapper footer {
@@ -644,13 +660,13 @@ footer p {
     position: relative;
     max-width: 900px;
     margin: 0 auto;
-    height: auto; /* Allow content to determine height */
-    min-height: 200px; /* Ensure a minimum height for consistent layout */
-    overflow: hidden; /* Prevent overflow of extra blockquotes */
+    height: auto; 
+    min-height: 200px; 
+    overflow: hidden; 
   }
   
   .testimonial-wrapper blockquote {
-    display: none; /* Hide all testimonials by default */
+    display: none; 
     font-size: 1.2rem;
     line-height: 1.6;
     color: #555;
@@ -661,7 +677,7 @@ footer p {
   }
   
   .testimonial-wrapper blockquote.active {
-    display: block; /* Show only the active testimonial */
+    display: block; 
   }
   
   .testimonial-wrapper footer {
@@ -669,8 +685,8 @@ footer p {
     font-size: 1rem;
     font-weight: bold;
     color: white;
-    display: block; /* Ensure it is displayed */
-    text-align: center; /* Center the name */
+    display: block; 
+    text-align: center;
   }
   
 
@@ -688,7 +704,7 @@ footer p {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: flex-start; /* Siguron që gjithçka të fillojë në fillim të rreshtit */
+    align-items: flex-start; 
     gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
@@ -697,7 +713,7 @@ footer p {
   .footer-section {
     flex: 1 1 calc(20% - 20px);
     min-width: 200px;
-    text-align: left; /* Siguron që teksti është i rreshtuar majtas */
+    text-align: left; 
   }
   
   .footer-section h2,
@@ -705,19 +721,19 @@ footer p {
     font-size: 1.2rem;
     margin-bottom: 15px;
     color: #000;
-    text-align: left; /* Titulli gjithashtu fillon në të majtë */
+    text-align: left; 
   }
   
   .footer-section p {
     font-size: 0.9rem;
     line-height: 1.6;
-    margin: 0; /* Hiq hapësirat shtesë të panevojshme */
+    margin: 0; 
   }
   
   .footer-section ul {
     list-style: none;
     padding: 0;
-    margin: 0; /* Siguron që lista të fillojë në të majtë */
+    margin: 0;
   }
   
   .footer-section ul li {
@@ -728,7 +744,7 @@ footer p {
     text-decoration: none;
     color: #555;
     transition: color 0.3s ease;
-    display: block; /* Siguron që çdo link të zërë një rresht të plotë */
+    display: block;
   }
   
   .footer-section ul li a:hover {
@@ -752,11 +768,11 @@ footer p {
     color: #000;
   }
   
-  /* Responsive Design */
+  
   @media (max-width: 768px) {
     .footer-container {
       flex-direction: column;
-      align-items: flex-start; /* Siguron që çdo shtyllë fillon në të majtë në mobile */
+      align-items: flex-start;
     }
   
     .footer-section {
@@ -764,3 +780,206 @@ footer p {
     }
   }
   
+
+
+
+
+
+@media (max-width: 1024px) {
+    .main-navbar, .sub-navbar {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px;
+    }
+  
+    .navbar-links {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .highlight-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .image-container {
+      flex: 1 1 100%;
+    }
+  
+    .text-container {
+      margin-top: 20px;
+    }
+  
+    .store-locator {
+      grid-template-columns: 1fr; 
+      text-align: center;
+    }
+  
+    .locator-content, .locator-map {
+      margin: 0 auto;
+      width: 90%; 
+    }
+  
+    .product-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .product {
+      max-width: 100%; 
+      margin-bottom: 20px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .main-navbar, .sub-navbar {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 10px;
+    }
+  
+    .navbar-links {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .menu {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .highlight-container {
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+    }
+  
+    .text-container h2 {
+      font-size: 1.5rem; 
+    }
+  
+    .btn-primary {
+      padding: 8px 16px; 
+      font-size: 0.9rem;
+    }
+  
+    .store-locator {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  
+    .locator-content {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .product-grid {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .product {
+      max-width: 100%;
+      text-align: center;
+    }
+  
+    .testimonial-wrapper {
+      height: auto;
+    }
+  
+    blockquote {
+      font-size: 1rem;
+    }
+  
+    footer {
+      flex-direction: column; 
+      align-items: flex-start;
+      gap: 20px;
+    }
+  
+    .footer-section {
+      width: 100%;
+    }
+  }
+  
+
+
+  header {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: 25%;
+    right: 10px;
+    z-index: 1000; 
+}
+
+.hamburger span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: white;
+    margin: 5px auto;
+    transition: all 0.3s ease;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    top: 20px;
+}
+
+.navbar-links li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+    top: 20px;
+
+}
+
+.navbar-links li a:hover {
+    color: #007BFF;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; 
+    }
+
+    .navbar-links {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: 10px;
+        background-color: #fff;
+        width: 200px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        z-index: 999;
+    top: 60%;
+
+    }
+
+    .navbar-links li {
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .navbar-links li a {
+        color: #333;
+    }
+}
